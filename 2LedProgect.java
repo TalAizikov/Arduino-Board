@@ -10,8 +10,6 @@ byte LEDstate = HIGH;
 byte SWITCHstate;
 byte lastSWITCHstate;
 byte LEDstate2 = HIGH;
-byte SWITCHstate2;
-byte lastSWITCHstate2;
 
 long previousMillis= 0;
 long currentMillis= 0;
@@ -41,7 +39,9 @@ if (currentMillis-previousMillis>interval)
 if ((lastSWITCHstate == HIGH) && (SWITCHstate == LOW))
 {
     LEDstate = !LEDstate;
+   LEDstate2 = !LEDstate2;
     digitalWrite(LEDpin, LEDstate);
+    digitalWrite(LEDpin2, LEDstate);
     previousMillis= currentMillis;
 }
 }
