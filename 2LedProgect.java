@@ -1,15 +1,14 @@
- /* SimpleToggle_PB_LED */
+/* SimpleToggle_PB_LED */
 
 
 const byte LEDpin = 3;
 const byte SWITCHpin = 2;
 const byte LEDpin2 = 4;
-const byte SWITCHpin2 = 5;
 
 byte LEDstate = HIGH;
+byte LEDstate2 = HIGH;
 byte SWITCHstate;
 byte lastSWITCHstate;
-byte LEDstate2 = HIGH;
 
 long previousMillis= 0;
 long currentMillis= 0;
@@ -41,7 +40,7 @@ if ((lastSWITCHstate == HIGH) && (SWITCHstate == LOW))
     LEDstate = !LEDstate;
    LEDstate2 = !LEDstate2;
     digitalWrite(LEDpin, LEDstate);
-    digitalWrite(LEDpin2, LEDstate);
+    digitalWrite(LEDpin2, !LEDstate);
     previousMillis= currentMillis;
 }
 }
