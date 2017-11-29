@@ -15,3 +15,5 @@ We could not get the program to work like in needs to yet. We think we might nee
 We added a delay and it looks pretty good but we needed to use milliseconds. millis() gives you the time in milliseconds at the current time of the program so we tried to add an if that will use 2 millis() and check if milli1 - milli2 is bigger the the intervel(delay) if it is it will run the button. We found the problem we had it was the our milli1 kept on setting back to 0 and then it could not be bigger then the delay
 ## Week Six
 We are kind of doing our own thing today. I want to have to LEDs switch between on and off. I was able to get it to work without to much problem but now I want to do it with 3 LEDs. Having a little trouble because I wanted to use arrays but after I switched back to regular var it worked great. You can find the code for 2 and 3 LEDs in my github.
+## Week Seven
+The mission for today is to get 6 LEDs to work at the same time, I was able to get it to work really fast but it was not the way the teacher wanted it. I was not able to get the 6 LEDs to work the way needed I think I have a problem with the code and not the hardware
