@@ -17,3 +17,5 @@ We added a delay and it looks pretty good but we needed to use milliseconds. mil
 We are kind of doing our own thing today. I want to have to LEDs switch between on and off. I was able to get it to work without to much problem but now I want to do it with 3 LEDs. Having a little trouble because I wanted to use arrays but after I switched back to regular var it worked great. You can find the code for 2 and 3 LEDs in my github.
 ## Week Seven
 The mission for today is to get 6 LEDs to work at the same time, I was able to get it to work really fast but it was not the way the teacher wanted it. I was not able to get the 6 LEDs to work the way needed I think I have a problem with the code and not the hardware
+## Week Eight
+We got it to work! First we had a problem that the code was right and it was set up the right way but it would just not compile. We found out that delay() is not a basic function and it has to point into the right directory to have the delay() working. Sadly that was the last assingment we had with the arduino boards. I think over all it was a successful part of the course, I learned a ton and I made a lot of things as well.
