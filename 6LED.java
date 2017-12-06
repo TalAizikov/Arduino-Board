@@ -1,52 +1,71 @@
-/* SimpleToggle_PB_LED */
+const int LED_1 = 2;    
+const int LED_2 = 3;        
+const int LED_3 = 4;    
 
-
-const byte LEDpin = 3;
-const byte SWITCHpin = 2;
-const byte LEDpin2 = 4;
-
-byte LEDstate = HIGH;
-byte LEDstate2 = LOW;
-
-byte SWITCHstate;
-byte lastSWITCHstate;
-
-long previousMillis= 0;
-long currentMillis= 0;
-long interval= 1000;
-
-void setup() {
-  // put your setup code here, to run once:
-pinMode(LEDpin, OUTPUT);
-pinMode(SWITCHpin, INPUT);
-digitalWrite(SWITCHpin, HIGH);
-  //second led
-pinMode(LEDpin2, OUTPUT);
-pinMode(SWITCHpin, INPUT);
-digitalWrite(SWITCHpin, HIGH);
-
+void setup() 
+{
 }
 
-
-void loop() {
-  // put your main code here, to run repeatedly:
+void loop()
+{
+  //turn on LED L1
+  pinMode(LED_1, OUTPUT);    
+  digitalWrite(LED_1, LOW);
+  pinMode(LED_2, OUTPUT);     
+  digitalWrite(LED_2, HIGH);  
+  pinMode(LED_3, INPUT);     
+  digitalWrite(LED_3, LOW);
   
-SWITCHstate = digitalRead(SWITCHpin);
-Serial.print(currentMillis);
-currentMillis=millis();
-if (currentMillis-previousMillis>interval)
-{
+  delay(500);
+   
+  //turn on LED L2
+  pinMode(LED_1, OUTPUT);    
+  digitalWrite(LED_1, HIGH);
+  pinMode(LED_2, OUTPUT);     
+  digitalWrite(LED_2, LOW);   
+  pinMode(LED_3, INPUT);     
+  digitalWrite(LED_3, LOW);
+  
+  delay(500);
+  
+  //turn on LED L3
+  pinMode(LED_1, INPUT);     
+  digitalWrite(LED_1, LOW);
+  pinMode(LED_2, OUTPUT);     
+  digitalWrite(LED_2, LOW);  
+  pinMode(LED_3, OUTPUT);     
+  digitalWrite(LED_3, HIGH);
+  
+  delay(500);
+  
+  //turn on LED L4
+  pinMode(LED_1, INPUT);     
+  digitalWrite(LED_1, LOW);
+  pinMode(LED_2, OUTPUT);    
+  digitalWrite(LED_2, HIGH);  
+  pinMode(LED_3, OUTPUT);    
+  digitalWrite(LED_3, LOW);
+  
+  delay(500);
 
-if ((lastSWITCHstate == HIGH) && (SWITCHstate == LOW))
-{
-    LEDstate = !LEDstate;
-    LEDstate2 = !LEDstate2;
+  //turn on LED L5
+  pinMode(LED_1, OUTPUT);    
+  digitalWrite(LED_1, LOW);
+  pinMode(LED_2, INPUT);     
+  digitalWrite(LED_2, LOW);
+  pinMode(LED_3, OUTPUT);   
+  digitalWrite(LED_3, HIGH);
+  
+  delay(500);
+  
+  //turn on LED L6
+  pinMode(LED_1, OUTPUT);
+  digitalWrite(LED_1, HIGH);
+  pinMode(LED_2, INPUT);
+  digitalWrite(LED_2, LOW);
+  pinMode(LED_3, OUTPUT);
+  digitalWrite(LED_3, LOW);
     
-    digitalWrite(LEDpin, LEDstate);
-    digitalWrite(LEDpin2, LEDstate2);
-    previousMillis= currentMillis;
-}
-}
-
-lastSWITCHstate = SWITCHstate;
+  delay(500);
+  
 }
